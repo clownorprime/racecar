@@ -1,0 +1,2 @@
+rf2o_laser_odometry
+-DCATKIN_DEVEL_PREFIX=/home/gsh/racecar_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gsh/racecar_ws/install -DCATKIN_WHITELIST_PACKAGES=rf2o_laser_odometry -G Unix Makefiles

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+	<include file="$(find racecar_description)/launch/racecar.launch"/>
+	<node name="racecar_keyop" pkg="racecar_control" type="keyboard_teleop.py" output="screen" />
+	<node name="racecar_motor_output" pkg="racecar_control" type="motor_control.py" output="screen"/>
+</launch>
+

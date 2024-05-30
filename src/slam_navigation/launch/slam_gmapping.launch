@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find racecar_odom)/launch/gazebo_odom.launch" />
+	<include file="$(find slam_navigation)/launch/robot_gmapping.launch" />
+	<node name="teleop" pkg="racecar_control" type="keyboard_teleop.py"/>
+</launch>

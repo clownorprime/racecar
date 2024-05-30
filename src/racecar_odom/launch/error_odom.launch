@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find racecar_odom)/launch/gazebo_odom.launch" />
+	<node name="imu_odom" pkg="racecar_odom" type="imu_odometry.py" output="screen" />
+	<node name="error_odom" pkg="racecar_odom" type="error_odometry.py" output="screen" />
+</launch>

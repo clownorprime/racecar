@@ -1,0 +1,8 @@
+prefix=/home/gsh/racecar_ws/devel
+
+Name: racecar_odom
+Description: Description of racecar_odom
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

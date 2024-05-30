@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find racecar_description)/launch/racecar_rviz.launch"/>
+	<include file="$(find rf2o_laser_odometry)/launch/rf2o_laser_odometry.launch" />
+	<include file="$(find racecar_control)/launch/controller_manager.launch"/>
+	<arg name="map_file" default="$(find slam_navigation)/map/map_runway.yaml" />
+	<arg name="move_foward_only" default="false"/>
+	<!-- Map server -->
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+	<!-- ACML -->
+	<include file="$(find slam_navigation)/launch/robot_acml.launch" />
+	
+	<!-- move_base -->
+	<include file="$(find slam_navigation)/launch/move_base.launch"/>
+</launch>
+

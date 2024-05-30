@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find racecar_description)/launch/racecar_rviz.launch" />
+    <include file="$(find racecar_control)/launch/controller_manager.launch" />
+	<node name="gazebo_odom" pkg="racecar_odom" type="gazebo_odometry.py" output="screen" />
+</launch>
